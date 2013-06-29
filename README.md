@@ -28,3 +28,40 @@ functionality within the module.
      [merged](https://github.com/D-Programming-Language/dmd/pull/2139), the
      successor to std.random should be implemented as a package, not a single
      module.
+
+
+## Specific aims
+
+  1. A D-ified (Deified?:-) version of the API defined in the [C++11 standard for
+     random number generation](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2011/n3242.pdf)
+
+  2. RNG-based algorithms including random shuffle, random cover and random sample
+
+  3. High-quality thread-safe unpredictable seed
+
+
+## Broad roadmap
+
+  1. Precise spec for uniform random number generators, RNG adaptors, random number
+     distributions, and other features of the package
+
+  2. Re-implement functionality currently available in std.random.
+
+  3. Submit for inclusion in Phobos.
+
+  4. Implement additional functionality defined in specific aims, but not implemented
+     in std.random.
+
+## Package modules
+
+The package std.random2 should contain the following submodules:
+
+  * ```std.random2.generators``` -- random number engines (e.g. Mersenne Twister,
+    Linear Congruential), including non-deterministic engines, seed sequence and
+    unpredictable seed.
+
+  * ```std.random2.adaptors``` -- e.g. discard block, independent bits
+
+  * ```std.random2.distributions``` -- e.g. uniform, normal, exponential, ...
+
+  * ```std.random2.algorithms``` -- e.g. randomShuffle, randomCover, randomSample
