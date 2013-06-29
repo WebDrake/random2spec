@@ -52,16 +52,20 @@ functionality within the module.
   4. Implement additional functionality defined in specific aims, but not implemented
      in std.random.
 
+
 ## Package modules
 
 The package std.random2 should contain the following submodules:
 
-  * ```std.random2.generators``` -- random number engines (e.g. Mersenne Twister,
+  * `std.random2.generators` -- random number engines (e.g. Mersenne Twister,
     Linear Congruential), including non-deterministic engines, seed sequence and
     unpredictable seed.
 
-  * ```std.random2.adaptors``` -- e.g. discard block, independent bits
+  * `std.random2.adaptors` -- e.g. discard block, independent bits
 
-  * ```std.random2.distributions``` -- e.g. uniform, normal, exponential, ...
+  * `std.random2.distributions` -- e.g. uniform, normal, exponential, ...
 
-  * ```std.random2.algorithms``` -- e.g. randomShuffle, randomCover, randomSample
+  * `std.random2.algorithms` -- e.g. randomShuffle, randomCover, randomSample
+
+Spec for these modules is contained respectively in the files `generators.md`,
+`adaptors.md`, `distributions.md` and `algorithms.md`.
